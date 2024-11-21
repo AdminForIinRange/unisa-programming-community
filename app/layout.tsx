@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "animate.css";
 import "./globals.css";
 
+import 'aos/dist/aos.css';
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -21,6 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
       <body className={`${poppins.variable} font-poppins antialiased`}>
         {children}
       </body>
