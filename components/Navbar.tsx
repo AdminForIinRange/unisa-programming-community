@@ -1,22 +1,29 @@
-"use client"
-import React, { useEffect } from 'react'
-
+"use client";
+import React, { useEffect } from "react";
 import Aos from "aos";
-
+import "aos/dist/aos.css";
 const Navbar = () => {
 
-    // useEffect(() => {
-    //     Aos.init({
-    //       duration: 500,
-    //       easing: "ease-in-out",
-    //       mirror: true,
-    //     }); // Initialize AOS with desired options
-    //   }, []);
-    
-  return (
-    <div        
-    className="animate__animated animate__fadeIn" style={{color:'white'}}>Navbar</div>
-  )
-}
+    Aos.init();
 
-export default Navbar
+
+  return (
+    <div
+  data-aos="fade-up"
+      className="h-full w-full flex items-center justify-center mt-[330]"
+    >
+      <div 
+  className="text-white text-7xl">
+        Navbar
+      </div>
+
+
+    </div>
+
+    
+  );
+};
+
+
+
+export default Navbar;
