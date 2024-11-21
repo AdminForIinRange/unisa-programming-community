@@ -5,17 +5,17 @@ import Aos from "aos";
 
 const Navbar = () => {
 
-    useEffect(() => {
-        Aos.init({
-          duration: 500,
-          easing: "ease-in-out",
-          mirror: true,
-        }); // Initialize AOS with desired options
-      }, []);
+    // useEffect(() => {
+    //     Aos.init({
+    //       duration: 500,
+    //       easing: "ease-in-out",
+    //       mirror: true,
+    //     }); // Initialize AOS with desired options
+    //   }, []);
     
   return (
-    <div         data-aos="fade-up"
-     className='text-3xl text-white'>Navbar</div>
+    <div        
+    className="animate__animated animate__fadeIn" style={{color:'white'}}>Navbar</div>
   )
 }
 
