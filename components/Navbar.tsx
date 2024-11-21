@@ -12,6 +12,9 @@ const Navbar = () => {
     });
   }, []);
 
+
+//  AOS (Animate On Scroll) works by detecting when elements come into view, and for it to trigger, there must be enough content (or height) in the page for scrolling to occur. AOS relies on the element's position relative to the viewport (its Y value) to decide when to animate.
+
   return (
     <>
       <div
@@ -20,7 +23,7 @@ const Navbar = () => {
         className="h-full w-full flex items-center justify-center mt-[130px]"
       >
         <div className="text-white text-7xl" data-aos="fade-up">
-          test
+          test 1
         </div>
       </div>
 
@@ -30,7 +33,7 @@ const Navbar = () => {
         className="h-full w-full flex items-center justify-center mt-[130px]"
       >
         <div className="text-white text-7xl" data-aos="fade-up">
-          test
+          test 2
         </div>
       </div>
 
@@ -40,55 +43,11 @@ const Navbar = () => {
         className="h-full w-full flex items-center justify-center mt-[130px]"
       >
         <div className="text-white text-7xl" data-aos="fade-up">
-          test
+          test 3 
         </div>
       </div>
 
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test
-        </div>
-      </div>
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test
-        </div>
-      </div>
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test
-        </div>
-      </div>
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test
-        </div>
-      </div>
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test
-        </div>
-      </div>
+     
     </>
   );
 };
