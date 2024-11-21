@@ -1,14 +1,29 @@
+import Image from "next/image";
 import React from "react";
+import onePieceOFbackground from "../../public/svg/onePieceOFbackground.svg";
+import Navbar from "@/components/Navbar";
 
 const Home = () => {
-
   return (
-<div className="text-red-500 bg-gray-100 sm:text-blue-500 sm:bg-blue-100 md:text-green-500 md:bg-green-100 lg:text-yellow-500 lg:bg-yellow-100 xl:text-orange-500 xl:bg-orange-100 2xl:text-purple-500 2xl:bg-purple-100">
-  Responsive Text and Background Colors
-</div>
-
-
-
+    <>
+    <Navbar />
+  
+      <div className="absolute inset-x-0 top-0 z-[-4] items-center justify-center ">
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+        <Image src={onePieceOFbackground} alt="BackGround" />
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-
+import "animate.css";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "StoreIt",
-  description: "StoreIt - The only storage solution you need.",
+  title: "UPC",
+  description: "University Programming club",
 };
 
 export default function RootLayout({
