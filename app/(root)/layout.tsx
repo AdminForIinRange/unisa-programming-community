@@ -19,7 +19,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
 
   return (
    
-        <div>{children}</div>
+        <div >{children}</div>
      
   );
 };
