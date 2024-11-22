@@ -16,33 +16,15 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test 1
-        </div>
+      <div className="fixed  w-100 h-100 bg-red sm:bg-green md:bg-blue lg:bg-yellow-500 xl:bg-purple-500">
+    BreakPoint
       </div>
-
       <div
-        data-aos="fade-up"
         // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
+        className="fixed  w-full  flex items-center justify-center mt-[10px] px-[10px] "
       >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test 2
-        </div>
-      </div>
-
-      <div
-        data-aos="fade-up"
-        // Animation for scrolling up
-        className="h-full w-full flex items-center justify-center mt-[130px]"
-      >
-        <div className="text-white text-7xl" data-aos="fade-up">
-          test 3
+        <div className=" bg-[#18181C] w-[100%] md:w-[70%]  lg:w-[50%] h-[65px] border-[#666666] border-[1.5px] rounded-xl hover:h-[75px] hover:md:w-[80%] hover:lg:w-[55%]   ease-in duration-300 hover:ease-out ease-in duration-300  ">
+       
         </div>
       </div>
     </>
