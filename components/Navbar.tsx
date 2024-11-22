@@ -4,6 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS here if it's not imported globally
 
 const Navbar = () => {
+  
   useEffect(() => {
     Aos.init({
       duration: 1000, // Set default duration for animations
