@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+    background: #000;
+}
+
+
 @layer base {
   * {
     @apply scroll-smooth;
@@ -64,6 +70,7 @@
     --chart-5: 340 75% 55%;
   }
 }
+
 
 @layer utilities {
 
