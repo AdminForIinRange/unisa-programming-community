@@ -5,6 +5,8 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS here if it's not imported globally
 import Link from "next/link";
+import Image from "next/image";
+import UPC_logo_Trans from "../public/png/UPC_logo_full_Trans.png";
 
 const Navbar = () => {
   useEffect(() => {
@@ -32,18 +34,6 @@ const Navbar = () => {
 
       speicals: true,
     },
-    {
-      name: "Join Us",
-      link: "",
-
-      speicals: true,
-    },
-    {
-      name: "Login",
-      link: "",
-
-      speicals: true,
-    },
   ];
 
   return (
@@ -53,22 +43,47 @@ const Navbar = () => {
       </div>
       <div
         // Animation for scrolling up
-        className="fixed  mt-[10px]  flex w-full items-center justify-center px-[10px] "
-      >
-        <div className=" h-[65px] w-full rounded-xl  border-[1.5px] border-[#666666] bg-[#18181C] duration-300 ease-in hover:h-[75px]   hover:ease-out md:w-[70%] hover:md:w-4/5 lg:w-[50%] hover:lg:w-[55%]  ">
-          <div className="flex size-full items-center justify-center  ">
-            {links.map(({ name, link, speicals, onClick }, index) => (
-              <div
-                key={index}
-                className="flex h-full cursor-pointer items-center justify-center gap-[100px] text-nowrap   text-white duration-300  ease-in hover:ease-out "
-              >
-                <div className=" rounded-xl px-3 py-2 duration-300 ease-in hover:bg-black ">
-                  <Link href={link} />
+       className=" hidden md:flex fixed mt-[10px] flex w-full items-center justify-center px-[10px]"
 
-                  {name}
+      >
+        <div
+          className=" h-[65px] w-full rounded-xl  border-[1.5px] border-[#666666] bg-[#18181C] duration-300 ease-in hover:h-[75px] 
+          hover:ease-out  md:w-[100%]  lg:w-[85%] hover:lg:w-[55%] xl:w-[65%]  "
+        >
+          <div className="flex size-full items-center justify-center gap-[10px] px-[35px]     ">
+            <Image
+              src={UPC_logo_Trans}
+              alt="Logo"
+              width={120}
+              height={120}
+              className=" "
+            />
+
+            <div className="flex size-full items-center justify-end gap-[8px] text-nowrap   text-white duration-300  ease-in hover:ease-out ">
+              {links.map(({ name, link, speicals, onClick }, index) => (
+                <div key={index}>
+                  <div className=" rounded-xl p-[10px] text-sm duration-300 ease-in hover:bg-black ">
+                    <Link href={link} />
+
+                    {name}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+
+         
+                <div className=" rounded-xl bg-[#5DE3E8] p-[10px] text-sm duration-300 ease-in hover:bg-black ">
+                  <Link href={""} />
+                  Join Us
+                </div>
+      
+
+       
+                <div className=" rounded-xl bg-[#0451EA] p-[10px] text-sm duration-300 ease-in hover:bg-black ">
+                  <Link href={""} />
+                  Login
+                </div>
+      
+            </div>
           </div>
         </div>
       </div>
