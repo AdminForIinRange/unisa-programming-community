@@ -11,7 +11,7 @@
 import React from "react";
 
 import "../globals.css";
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   return <div>{children}</div>;
 };
