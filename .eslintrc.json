@@ -5,8 +5,13 @@
     "standard",
     "plugin:tailwindcss/recommended",
     "prettier"
+
   ],
   "rules": {
-    "no-undef": "off"
+    "no-undef": "off",
+    "@typescript-eslint/no-explicit-any": ["error", {
+      "fixToUnknown": true
+    }]
   }
 }
+
