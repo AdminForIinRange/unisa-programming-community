@@ -9,6 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  darkMode: "media", // Uses prefers-color-scheme
   title: "UPC",
   description: "University Programming club",
 };
@@ -17,7 +18,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head >
         <link
           rel="stylesheet"
