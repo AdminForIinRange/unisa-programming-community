@@ -27,7 +27,7 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div  className=" flex items-center justify-center text-sm  text-red md:w-[full]  lg:w-[full] trans ">
+    <div  className=" flex items-center justify-center text-sm  md:w-[full]  lg:w-[full] trans ">
       <div onMouseEnter={() => setActive(item)} className="relative ">
         <motion.p
           transition={{ duration: 0.3 }}
@@ -74,7 +74,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="text-nowrap relative flex justify-center rounded-full md:space-x-[0px]  lg:space-x-[20px] border border-transparent bg-white md:px-5 lg:px-20 py-4 shadow-input dark:border-white/[0.2] dark:bg-black  "
+      className="text-nowrap relative flex justify-center rounded-full md:space-x-[0px]  lg:space-x-[20px] border border-transparent  backdrop-blur-md shadow-lg bg-transparent md:px-5 lg:px-20 py-4 shadow-input dark:border-white/[0.2] "
     >
       {children}
     </nav>
