@@ -65,7 +65,7 @@ export default function Navbar({ className }: { className?: string }) {
                 Textcolor={false}
                 item="About us"
               >
-                <div className="flex flex-col space-y-4 text-sm">
+                {/* <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
                   <HoveredLink href="/interface-design">
                     Interface Design
@@ -74,7 +74,7 @@ export default function Navbar({ className }: { className?: string }) {
                     Search Engine Optimization
                   </HoveredLink>
                   <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
+                </div> */}
               </MenuItem>
             </div>
 
@@ -85,7 +85,7 @@ export default function Navbar({ className }: { className?: string }) {
                 Textcolor={false}
                 item="Events"
               >
-                <div className="flex flex-col space-y-4 text-sm">
+                {/* <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
                   <HoveredLink href="/interface-design">
                     Interface Design
@@ -94,7 +94,7 @@ export default function Navbar({ className }: { className?: string }) {
                     Search Engine Optimization
                   </HoveredLink>
                   <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
+                </div> */}
               </MenuItem>
             </div>
             <div className="   rounded-xl ">
@@ -104,7 +104,7 @@ export default function Navbar({ className }: { className?: string }) {
                 active={active}
                 item="Open Source"
               >
-                <div className="flex flex-col space-y-4 text-sm">
+                {/* <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
                   <HoveredLink href="/interface-design">
                     Interface Design
@@ -113,7 +113,7 @@ export default function Navbar({ className }: { className?: string }) {
                     Search Engine Optimization
                   </HoveredLink>
                   <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
+                </div> */}
               </MenuItem>
             </div>
 
@@ -124,7 +124,7 @@ export default function Navbar({ className }: { className?: string }) {
                 Textcolor={false}
                 item="sponsors"
               >
-                <div className="flex flex-col space-y-4 text-sm">
+                {/* <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
                   <HoveredLink href="/interface-design">
                     Interface Design
@@ -133,7 +133,7 @@ export default function Navbar({ className }: { className?: string }) {
                     Search Engine Optimization
                   </HoveredLink>
                   <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
+                </div> */}
               </MenuItem>
             </div>
             <div className="   rounded-xl ">
@@ -143,7 +143,7 @@ export default function Navbar({ className }: { className?: string }) {
                 item="Contact"
                 Textcolor={false}
               >
-                <div className="  grid grid-cols-2 gap-10 p-4 text-sm">
+                {/* <div className="  grid grid-cols-2 gap-10 p-4 text-sm">
                   <ProductItem
                     title="Algochurn"
                     href="https://algochurn.com"
@@ -168,7 +168,7 @@ export default function Navbar({ className }: { className?: string }) {
                     src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
                     description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
                   />
-                </div>
+                </div> */}
               </MenuItem>
             </div>
 
@@ -180,7 +180,7 @@ export default function Navbar({ className }: { className?: string }) {
                 Textcolor={false}
                 item="Join Us"
               >
-                <div className="flex flex-col space-y-4 text-sm  ">
+                {/* <div className="flex flex-col space-y-4 text-sm  ">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
                   <HoveredLink href="/interface-design">
                     Interface Design
@@ -189,7 +189,7 @@ export default function Navbar({ className }: { className?: string }) {
                     Search Engine Optimization
                   </HoveredLink>
                   <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
+                </div> */}
               </MenuItem>{" "}
             </div>
 
@@ -200,7 +200,7 @@ export default function Navbar({ className }: { className?: string }) {
                 Textcolor={true}
                 item="Login"
               >
-                <div className="flex flex-col space-y-4 text-sm">
+                {/* <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/web-dev">Web Development</HoveredLink>
                   <HoveredLink href="/interface-design">
                     Interface Design
@@ -209,7 +209,7 @@ export default function Navbar({ className }: { className?: string }) {
                     Search Engine Optimization
                   </HoveredLink>
                   <HoveredLink href="/branding">Branding</HoveredLink>
-                </div>
+                </div> */}
               </MenuItem>
             </div>
           </Menu>
