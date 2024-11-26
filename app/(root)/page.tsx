@@ -3,11 +3,14 @@ import React from "react";
 import onePieceOFbackground from "../../public/svg/onePieceOFbackground.svg";
 import Navbar from "@/components/Navbar";
 
+import Hero from "@/components/Hero";
 const Home = () => {
   return (
     <>
       <Navbar />
 
+      <Hero />
+    
       <div className="absolute inset-x-0 top-0 z-[-4] items-center justify-center ">
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
