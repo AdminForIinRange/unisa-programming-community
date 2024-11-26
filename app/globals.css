@@ -61,6 +61,33 @@
   }
 }
 
+@layer utilities {
+  /* Horizontal Stack (HStack) */
+.hstack {
+  @apply flex flex-row items-center;
+}
+.hstack-center {
+  @apply flex flex-row items-center justify-center;
+}
+.hstack-space {
+  @apply flex flex-row justify-between;
+}
+/* Vertical Stack (VStack) */
+.vstack {
+  @apply flex flex-col items-center;
+}
+.vstack-center {
+  @apply flex flex-col items-center justify-center;
+}
+.vstack-space {
+  @apply flex flex-col justify-between;
+}
+/* Center Content */
+.center-content {
+  @apply flex items-center justify-center;
+}
+}
+
 @layer base {
   * {
     @apply border-border;
