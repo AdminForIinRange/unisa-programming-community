@@ -91,25 +91,25 @@ export const Carousel = ({ items, initialScroll = 235 }: CarouselProps) => {
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
       {" "}
-      <div className="flex justify-center mr-0 gap-2  lg:mr-40 lg:justify-end">
+      <div className="mr-0 flex justify-center gap-2  lg:mr-40 lg:justify-end">
         <button
-          className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+          className="relative z-40 flex size-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
           onClick={scrollLeft}
           disabled={!canScrollLeft}
         >
-          <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+          <IconArrowNarrowLeft className="size-6 text-gray-500" />
         </button>
         <button
-          className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+          className="relative z-40 flex size-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
           onClick={scrollRight}
           disabled={!canScrollRight}
         >
-          <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+          <IconArrowNarrowRight className="size-6 text-gray-500" />
         </button>
       </div>
       <div className="relative w-full ">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -142,7 +142,7 @@ export const Carousel = ({ items, initialScroll = 235 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                className="rounded-3xl last:pr-[5%]  md:last:pr-[33%]"
               >
                 {item}
               </motion.div>
@@ -200,12 +200,12 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
+          <div className="fixed inset-0 z-50 h-screen overflow-auto">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="bg-black/80 backdrop-blur-lg h-full w-full fixed inset-0"
+              className="fixed inset-0 size-full bg-black/80 backdrop-blur-lg"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -213,13 +213,13 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="relative z-[60] mx-auto my-10 h-fit  max-w-5xl rounded-3xl bg-white p-4 font-sans dark:bg-neutral-900 md:p-10"
             >
               <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
+                className="sticky right-0 top-4 ml-auto flex size-8 items-center justify-center rounded-full bg-black dark:bg-white"
                 onClick={handleClose}
               >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                <IconX className="size-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
@@ -229,7 +229,7 @@ export const Card = ({
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
+                className="mt-4 text-2xl font-semibold text-neutral-700 dark:text-white md:text-5xl"
               >
                 {card.title}
               </motion.p>
@@ -241,19 +241,19 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 dark:bg-neutral-900 md:h-[40rem] md:w-96"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
+            className="w-fit rounded-full bg-black p-2  px-4 text-left font-sans text-sm font-medium  text-white md:text-base"
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            className="mt-2 max-w-xs text-left  font-sans text-xl font-semibold text-white [text-wrap:balance] md:text-3xl"
           >
             {card.title}
           </motion.p>
@@ -262,7 +262,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="object-cover absolute z-10 inset-0"
+          className="absolute inset-0 z-10 object-cover"
         />
       </motion.button>
     </>
@@ -292,7 +292,7 @@ export const BlurImage = ({
       loading="lazy"
       decoding="async"
       blurDataURL={typeof src === "string" ? src : undefined}
-      alt={alt ? alt : "Background of a beautiful view"}
+      alt={alt || "Background of a beautiful view"}
       {...rest}
     />
   );
