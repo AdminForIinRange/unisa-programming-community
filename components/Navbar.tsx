@@ -16,6 +16,13 @@ import {
   User,
   UserPlus,
   Users,
+  PersonStanding,
+  CalendarCheck2,
+  Code,
+  Headset,
+  HeartHandshake,
+  KeyRound,
+  SmilePlus,
 } from "lucide-react";
 import React, { useState } from "react";
 import {
@@ -239,39 +246,39 @@ export default function Navbar({ className }: { className?: string }) {
    
             <DropdownMenuGroup >
               <DropdownMenuItem >
-                <User />
+              <PersonStanding />
                 <span>About us</span>
-                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                {/* <DropdownMenuShortcut>come</DropdownMenuShortcut> */}
               </DropdownMenuItem>
               <DropdownMenuItem >
-                <CreditCard />
+              <CalendarCheck2 />
                 <span>Events</span>
-                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+               
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Settings />
+              <Code />
                 <span>Open Source</span>
-                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+       
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Keyboard />
+              <HeartHandshake />
                 <span>sponsors</span>
-                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Keyboard />
+              <Headset />
                 <span>Contact</span>
-                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Keyboard />
+              <SmilePlus />
                 <span>Join Us</span>
-                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Keyboard />
+              <KeyRound />
                 <span>Login</span>
-                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              
               </DropdownMenuItem>
             </DropdownMenuGroup>
         
