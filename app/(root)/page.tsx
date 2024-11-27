@@ -21,7 +21,7 @@ const Home = () => {
       <Hero />
 
       <div className="absolute inset-x-0 top-0 z-[-4] items-center justify-center ">
-      <TracingBeam className=" right-[100] top-[50] "  >
+      <TracingBeam className="top-[40px] "  >
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
@@ -35,6 +35,9 @@ const Home = () => {
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
+     
+
+
       </TracingBeam>
       </div>
     </>

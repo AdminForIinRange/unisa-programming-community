@@ -70,16 +70,16 @@ const Hero = () => {
   return (
     <>
       <div className=" relative flex flex-col items-center  justify-center   ">
-        <div className=" z-10 mx-auto mt-[150px] flex w-full  flex-row  flex-wrap items-center justify-center  px-[50px] lg:px-[100px]  md:pt-0">
+        <div className=" z-10 mx-auto lg:mt-[150px] mt-0  flex w-full  flex-row  flex-wrap items-center justify-center  px-[50px] lg:px-[100px]  md:pt-0">
           <h1
             //  style={{filter:"drop-shadow(0 0 5px #0752E9)"}}
             data-aos="fade-up"
-            className=" animate__animated animate__zoomInDown drop bg-gradient-to-b   from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold text-transparent drop-shadow-lg  2xl:text-9xl lg:text-8xl md:text-7xl sm:text-7xl"
+            className=" animate__animated animate__zoomInDown drop bg-gradient-to-b   from-neutral-50 to-neutral-400 bg-clip-text text-center  font-bold text-transparent drop-shadow-lg  2xl:text-9xl lg:text-8xl md:text-7xl sm:text-7xl text-5xl"
           >
             Learn,{" "}
             <span
               data-aos="fade-up"
-              className=" animate__animated animate__zoomInDown drop bg-gradient-to-b   from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold text-transparent drop-shadow-lg     2xl:text-9xl lg:text-8xl md:text-7xl sm:text-7xl"
+              className=" animate__animated animate__zoomInDown drop bg-gradient-to-b   from-neutral-50 to-neutral-400 bg-clip-text text-center ont-bold text-transparent drop-shadow-lg      2xl:text-9xl lg:text-8xl md:text-7xl sm:text-7xl text-5xl"
             >
               {" "}
               Improve
@@ -89,7 +89,7 @@ const Hero = () => {
           <h1
             data-aos=" fade-up"
             className=" animate__animated animate__zoomInUp 
-          animate__delay-1s    bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-bold text-transparent  2xl:text-9xl  lg:text-8xl md:text-7xl sm:text-7xl text-6xl"
+          animate__delay-1s    bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center font-bold text-transparent  2xl:text-9xl  lg:text-8xl md:text-7xl sm:text-7xl text-5xl"
           >
             Collaborate
           </h1>
