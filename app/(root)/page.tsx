@@ -11,6 +11,8 @@ import Navbar from "@/components/Navbar";
 
 import Hero from "@/components/Hero";
 const Home = () => {
+
+  
   return (
     <>
         {/* Content goes here */}
@@ -32,10 +34,7 @@ const Home = () => {
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
         <Image src={onePieceOFbackground} alt="BackGround" />
-        <Image src={onePieceOFbackground} alt="BackGround" />
-        <Image src={onePieceOFbackground} alt="BackGround" />
-        <Image src={onePieceOFbackground} alt="BackGround" />
-     
+     {/* add more if need be */}
 
 
       </TracingBeam>
