@@ -28,10 +28,19 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "assets.aceternity.com", // Added this line
+        hostname: "assets.aceternity.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com", // Allow Unsplash
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com", // Allow Pexels
       },
     ],
   },
 };
 
 export default nextConfig;
+
