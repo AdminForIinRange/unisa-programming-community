@@ -36,7 +36,7 @@ export const CarouselContext = createContext<{
   currentIndex: 0,
 });
 
-export const Carousel = ({ items, initialScroll =200 }: CarouselProps) => {
+export const Carousel = ({ items, initialScroll = 235 }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
@@ -53,7 +53,7 @@ export const Carousel = ({ items, initialScroll =200 }: CarouselProps) => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
       setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth );
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
     }
   };
 
@@ -83,28 +83,30 @@ export const Carousel = ({ items, initialScroll =200 }: CarouselProps) => {
   };
 
   const isMobile = () => {
-    return true
+    return true;
   };
 
   return (
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose, currentIndex }}
-    > <div className="flex justify-center mr-0 gap-2  lg:mr-40 lg:justify-end">
-    <button
-      className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
-      onClick={scrollLeft}
-      disabled={!canScrollLeft}
     >
-      <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
-    </button>
-    <button
-      className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
-      onClick={scrollRight}
-      disabled={!canScrollRight}
-    >
-      <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
-    </button>
-  </div>
+      {" "}
+      <div className="flex justify-center mr-0 gap-2  lg:mr-40 lg:justify-end">
+        <button
+          className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+          onClick={scrollLeft}
+          disabled={!canScrollLeft}
+        >
+          <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+        </button>
+        <button
+          className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+          onClick={scrollRight}
+          disabled={!canScrollRight}
+        >
+          <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+        </button>
+      </div>
       <div className="relative w-full ">
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
@@ -113,14 +115,14 @@ export const Carousel = ({ items, initialScroll =200 }: CarouselProps) => {
         >
           <div
             className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
+              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l",
             )}
           ></div>
 
           <div
             className={cn(
               "rounded-3xl flex flex-row justify-start gap-4 pl-4",
-              "max-w-7xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
+              "max-w-7xl mx-auto", // remove max-w-4xl if you want the carousel to span the full width of its container
             )}
           >
             {items.map((item, index) => (
@@ -128,9 +130,6 @@ export const Carousel = ({ items, initialScroll =200 }: CarouselProps) => {
                 initial={{
                   opacity: 0,
                   y: 20,
-              
-                
-                  
                 }}
                 animate={{
                   opacity: 1,
@@ -150,7 +149,6 @@ export const Carousel = ({ items, initialScroll =200 }: CarouselProps) => {
             ))}
           </div>
         </div>
-       
       </div>
     </CarouselContext.Provider>
   );
@@ -285,7 +283,7 @@ export const BlurImage = ({
       className={cn(
         "transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
-        className
+        className,
       )}
       onLoad={() => setLoading(false)}
       src={src}
