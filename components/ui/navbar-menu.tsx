@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
+import UPC_logo_Trans from "../../public/png/UPC_logo_Trans.png";
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -22,16 +22,16 @@ export const MenuItem = ({
 }: {
   setActive: (item: string) => void;
   active: string | null;
-  Textcolor: boolean ;
+  Textcolor: boolean;
   item: string;
   children?: React.ReactNode;
 }) => {
   return (
-    <div  className=" flex items-center justify-center text-sm  md:w-[full]  lg:w-[full] trans ">
+    <div className=" flex items-center justify-center text-sm  md:w-[full]  lg:w-[full] trans ">
       <div onMouseEnter={() => setActive(item)} className="relative ">
         <motion.p
           transition={{ duration: 0.3 }}
-          className={` px-[20px] py-[10px] w-full text-center cursor-pointer text-black hover:opacity-90 ${Textcolor ? "dark:text-black" : "dark:text-white"} hover:dark:text-black hover:dark:bg-white rounded-full` }
+          className={` px-[20px] md:px-[12px] py-[10px] w-full text-center cursor-pointer text-black hover:opacity-90 ${Textcolor ? "dark:text-black" : "dark:text-white"} hover:dark:text-black hover:dark:bg-white rounded-full`}
         >
           {item}
         </motion.p>
@@ -74,8 +74,20 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="text-nowrap relative flex justify-center rounded-full md:space-x-[0px]  lg:space-x-[20px] border border-transparent  backdrop-blur-md shadow-lg bg-transparent md:px-5 lg:px-20 py-4 shadow-input dark:border-white/[0.2] "
+      className="text-nowrap relative flex justify-center items-center rounded-full md:space-x-[5px]  lg:space-x-[25px] border border-transparent  backdrop-blur-md shadow-lg bg-transparent  md:px-14 lg:px-15 py-4 shadow-input dark:border-white/[0.2] "
     >
+
+
+        <Image
+          alt="Logo"
+          width={40}
+          height={40}
+          src={UPC_logo_Trans}
+        />
+
+<div
+     className=" inline-block min-h-[2em] w-0.5 border dark:border-white/[0.2]"></div>
+
       {children}
     </nav>
   );

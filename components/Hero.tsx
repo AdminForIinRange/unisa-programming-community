@@ -32,11 +32,14 @@ const Hero = () => {
 
   return (
     <div>
+      
       <div className=" flex flex-col justify-center items-center flex-wrap relative z-10  mx-auto mt-[150px] w-full   max-w-7xl p-4 pt-20 md:pt-0">
+       
+ 
         <h1
           //  style={{filter:"drop-shadow(0 0 5px #0752E9)"}}
           data-aos="fade-up"
-          className=" animate__animated animate__zoomInDown drop-shadow-lg drop   bg-gradient-to-b from-[#0752E9] backdrop-blur-xl to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-9xl"
+          className=" animate__animated animate__zoomInDown drop-shadow-lg drop   bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-9xl"
         >
           Learn
         </h1>
@@ -45,15 +48,15 @@ const Hero = () => {
           data-aos="fade-up"
           className=" animate__animated animate__zoomIn animate__delay-1s    bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-9xl"
         >
-          Collaborate
+          Improve
         </h1>
         <h1
           //   style={{ filter: "drop-shadow(0 0 5px #62E2E9)" }}
           data-aos=" fade-up"
           className=" animate__animated animate__zoomInUp 
-          animate__delay-1s   bg-gradient-to-b from-neutral-50 to-[#62E2E9]  bg-clip-text text-center text-4xl font-bold text-transparent md:text-9xl"
+          animate__delay-1s   bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-9xl"
         >
-          Grow
+         Collaborate
         </h1>
       </div>
       {/* <BentoGrid className="max-w-4xl mx-auto">

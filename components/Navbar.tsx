@@ -50,12 +50,18 @@ export default function Navbar({ className }: { className?: string }) {
       <div className="w-100  h-100 2xl:bg-orange-500 fixed bg-red sm:bg-green md:bg-blue lg:bg-yellow-500 xl:bg-purple-500">
         BreakPoint
       </div>
+
+
+
+     
+
       <div
         className={cn(
-          "fixed   justify-center items-center top-5 inset-x-0 max-w-2xl mx-auto z-50   hidden md:flex transition ease-in-out delay-150 ",
+          "fixed   justify-center items-center top-5 inset-x-0 max-w-2xl mx-auto z-50   hidden lg:flex transition ease-in-out delay-150 ",
           className,
         )}
       >
+        
         <div className=" text-center ">
           <Menu setActive={setActive}>
             <div className="   rounded-xl   ">
@@ -216,100 +222,65 @@ export default function Navbar({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className=" flex items-start justify-between  space-x-3 p-[25px] md:hidden   ">
+      <div className=" flex items-start justify-between  space-x-3 p-[25px] lg:hidden   ">
         <div className="flex items-center justify-center">
           <Image alt="Logo" width={50} height={50} src={UPC_logo_Trans} />
         </div>
 
-        <DropdownMenu  >
+        <DropdownMenu >
           <DropdownMenuTrigger asChild>
-            <Button className="rounded-[10px] border-gray-500 border p-[20px]">
+            <Button className="rounded-[10px] border-gray-500 border p-[20px] px-[50px]">
               <SquareMenu />
             </Button>
           </DropdownMenuTrigger>
 
-          <DropdownMenuContent className="w-56 rounded-xl border-gray-500">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
+          <DropdownMenuContent className="rounded-xl border-gray-500 mr-[20px]  w-[200px] bg-black">
+            {/* <DropdownMenuLabel>My Account</DropdownMenuLabel> */}
+   
+            <DropdownMenuGroup >
+              <DropdownMenuItem >
                 <User />
-                <span>Profile</span>
+                <span>About us</span>
                 <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem >
                 <CreditCard />
-                <span>Billing</span>
+                <span>Events</span>
                 <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Settings />
-                <span>Settings</span>
+                <span>Open Source</span>
                 <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Keyboard />
-                <span>Keyboard shortcuts</span>
+                <span>sponsors</span>
+                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Keyboard />
+                <span>Contact</span>
+                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Keyboard />
+                <span>Join Us</span>
+                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Keyboard />
+                <span>Login</span>
                 <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
               </DropdownMenuItem>
             </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <Users />
-                <span>Team</span>
-              </DropdownMenuItem>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>
-                  <UserPlus />
-                  <span>Invite users</span>
-                </DropdownMenuSubTrigger>
-                <DropdownMenuPortal>
-                  <DropdownMenuSubContent>
-                    <DropdownMenuItem>
-                      <Mail />
-                      <span>Email</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <MessageSquare />
-                      <span>Message</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                      <PlusCircle />
-                      <span>More...</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuSubContent>
-                </DropdownMenuPortal>
-              </DropdownMenuSub>
-              <DropdownMenuItem>
-                <Plus />
-                <span>New Team</span>
-                <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <Github />
-              <span>GitHub</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <LifeBuoy />
-              <span>Support</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem disabled>
-              <Cloud />
-              <span>API</span>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <LogOut />
-              <span>Log out</span>
-              <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-            </DropdownMenuItem>
+        
+            
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+
+      
     </>
   );
 }
