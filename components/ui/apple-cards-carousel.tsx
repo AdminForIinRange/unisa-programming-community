@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { ChevronRight } from "lucide-react";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -247,13 +248,13 @@ export const Card = ({
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="w-fit rounded-full bg-black p-2  px-4 text-left font-sans text-sm font-medium  text-white md:text-base"
+            className="w-fit flex rounded-full bg-black p-2  px-4 text-left font-sans text-sm font-medium  text-white md:text-base"
           >
-            {card.category}
+            <ChevronRight /> {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-2 max-w-xs text-left  font-sans text-xl font-semibold text-white [text-wrap:balance] md:text-3xl"
+            className="mt-2 max-w-xs text-left   font-sans text-xl font-semibold text-white [text-wrap:balance] md:text-3xl "
           >
             {card.title}
           </motion.p>
